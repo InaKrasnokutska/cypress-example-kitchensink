@@ -6,6 +6,10 @@ pipeline {
     }
   }
 
+  options{
+    ansiColor('xterm')
+  }
+  
   stages {
     stage('build and test') {
       steps {
@@ -14,6 +18,12 @@ pipeline {
         //sh "npm run cy:my"
         sh "npm run cy:run"
       }
+    }
+  }
+  
+  post{
+    always{
+      publishHTML([allowMission: false, alwaysLinkToLastBuild:false, keepAll: true, reportDir: cypress/report', reportFiles: 'index.html', reportName: "HTML Report', reportTitles: ''])
     }
   }
 }
