@@ -36,7 +36,7 @@
     "cy:version": "cypress version",
     "cy:cache:list": "cypress cache list",
     "cy:run": "cypress run",
-    "cy:my": "cypress run --browser chrome --spec /cypress/e2e/2-advanced-examples/my.cy.js",
+    "cy:my": "cypress run --spec /cypress/e2e/2-advanced-examples/my.cy.js",
     "cy:run:record": "cypress run --record",
     "cy:open": "cypress open",
     "local:open": "start-test 8080 cy:open",
