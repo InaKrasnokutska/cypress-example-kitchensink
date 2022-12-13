@@ -3,7 +3,7 @@ module.exports = {
   e2e: {},
   reporter: 'junit',
   reporterOptions: {
-    mochaFile: 'results/result.xml',
+    mochaFile: 'results/result-[hash].xml',
     toConsole: true
   },
 }
